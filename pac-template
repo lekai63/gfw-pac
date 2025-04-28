@@ -56,13 +56,13 @@ function ipToBinary(ip) {
         var parts = ip.split('::');
         var left = parts[0] ? parts[0].split(':') : [];
         var right = parts[1] ? parts[1].split(':') : [];
-        
+
         // Calculate the number of zero groups to insert
         var zeroGroups = 8 - (left.length + right.length);
-        
+
         // Create the full address by inserting zero groups
         var fullAddress = left.concat(Array(zeroGroups + 1).join('0').split('')).concat(right);
-        
+
         // Convert each group to binary and pad to 16 bits
         bin = fullAddress.map(function(group) {
             return ("0000000000000000" + parseInt(group || '0', 16).toString(2)).slice(-16);
@@ -70,7 +70,7 @@ function ipToBinary(ip) {
     }
     return bin.replace(/^0+/, '');
 }
-  
+
 function isInDirectDomain(host) {
     for (var i = 0; i < directDomains.length; i++) {
         var domain = directDomains[i];
@@ -144,7 +144,7 @@ function FindProxyForURL(url, host) {
     }
 
     debug('未命中任何规则', host, ip);
-    return proxy;
+    return direct;
 }
 
 var allowAlert = true
