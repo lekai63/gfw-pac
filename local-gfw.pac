@@ -144,7 +144,7 @@ function FindProxyForURL(url, host) {
     }
 
     debug('未命中任何规则', host, ip);
-    return direct;
+    return proxy;
 }
 
 var allowAlert = true
