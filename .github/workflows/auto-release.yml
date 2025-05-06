@@ -3,7 +3,8 @@ name: Auto Generate Release
 on:
     push:
         paths:
-            - "gfw.pac"
+            - "local-gfw.pac"
+            - "router-gfw.pac"
     workflow_dispatch:
 
 jobs:
