@@ -1,3 +1,6 @@
+segment.com
+diabrowser.engineering
+zed.dev
 google.com.hk
 ent.com
 youtube.com
