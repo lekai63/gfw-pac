@@ -1,4 +1,5 @@
 segment.com
+segment.io
 diabrowser.engineering
 zed.dev
 google.com.hk
